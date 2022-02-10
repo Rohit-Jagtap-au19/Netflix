@@ -24,9 +24,9 @@ app.use(express.json());
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
-// app.use("/api/movies", movieRoute);
-// app.use("/api/lists", listRoute);
+app.use("/api/movies", movieRoute);
+app.use("/api/lists", listRoute);
 
-app.listen(8800, () => {
+app.listen(process.env.PORT, () => {
   console.log("Backend server is running!");
 });
